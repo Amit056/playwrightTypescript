@@ -1,0 +1,29 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env ENV=emt npx playwright test",
+    "test:prod": "cross-env ENV=prod npx playwright test",
+    "test:specific": "cross-env ENV=emt npx playwright test -g",
+    "clean": "rimraf ./reports ./test-results",
+    "pretest": "npm run clean",
+    "typecheck": "tsc --noEmit",
+    "posttest": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.2",
+    "cross-env": "^10.1.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3"
+  }
+}
