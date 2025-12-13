@@ -56,4 +56,5 @@ export async function selectDate(
 
   /** Step 3: Select the date */
   await page.locator(`li[id$="_${idSuffix}"]`).click();
+  await page.locator(`li[id$="_${idSuffix}"]`).click();
 }
