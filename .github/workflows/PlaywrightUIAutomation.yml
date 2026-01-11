@@ -1,0 +1,86 @@
+name: Playwright UI Automation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "Environment"
+        required: true
+        default: "qa"
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
+          - aci
+
+permissions:
+  contents: write
+
+jobs:
+  playwright-tests:
+    runs-on: ubuntu-latest
+
+    env:
+      ENV: ${{ github.event.inputs.env || 'qa' }}
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Clean old Allure results
+        run: rm -rf allure-results allure-report
+
+      - name: Run Playwright Tests
+        run: |
+          echo "Running in ENV=$ENV"
+          npx playwright test
+
+      - name: Generate Allure Report
+        if: always()
+        run: |
+          npx allure generate allure-results --clean -o allure-report
+
+      - name: Deploy Allure Report to GitHub Pages
+        if: always()
+        run: |
+          mkdir -p /tmp/allure-report
+          cp -r allure-report/* /tmp/allure-report/
+
+          git reset --hard
+          git fetch origin || true
+          git checkout gh-pages || git checkout -b gh-pages
+
+          for item in * .*; do
+            if [ "$item" != "." ] && [ "$item" != ".." ] && [ "$item" != ".git" ]; then
+              rm -rf "$item"
+            fi
+          done
+
+          cp -r /tmp/allure-report/* .
+          touch .nojekyll
+
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add .
+          git commit -m "Publish Playwright Allure report"
+          git push origin gh-pages

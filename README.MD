@@ -28,3 +28,12 @@ npx playwright test -g "TEST DESCRIPTION"
 EX: npx playwright test -g "two way trip"
 
 
+allure installation :  npm install allure-playwright
+npm install --save-dev @playwright/test allure-playwright
+npm install -D allure-playwright allure-commandline
+
+
+npm run test:specific -g "@round1" --reporter=line,allure-playwright
+
+//To enter Env and Tag from cmd
+npm run test:tag -g "@round1" --env "aci"

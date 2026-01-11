@@ -37,7 +37,7 @@ test.afterAll(async () => {
   console.log('Browser closed');
 });
 
-test('sm login', async () => {
+test('@sm login', async () => {
   await page.goto(process.env.URL);
   await page.locator(`[id="username"]`).fill(process.env.Teacher);
   await page.locator(`[id="password"]`).fill(process.env.Password);
@@ -46,8 +46,10 @@ test('sm login', async () => {
   await page.getByRole('link', { name: 'Students' }).click();
   await page.getByText(`No thank you`).click();
   await page.waitForTimeout(15000);
-} );
-test('sm login', async () => {
+});
+
+
+test('@sm login1', async () => {
   await page.goto(process.env.URL);
   await page.locator(`[id="username"]`).fill(process.env.Teacher);
   await page.locator(`[id="password"]`).fill(process.env.Password);
