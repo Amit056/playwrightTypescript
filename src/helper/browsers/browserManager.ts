@@ -1,7 +1,7 @@
 import { chromium, firefox, LaunchOptions, webkit } from "@playwright/test";
 
 const options: LaunchOptions = {
-    headless: false,
+    headless: true,
     args: ['--start-maximized']
 };
 
