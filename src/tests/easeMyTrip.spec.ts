@@ -51,7 +51,7 @@ test('emt one way trip', async () => {
   await page.waitForTimeout(5000);
 });
 
-test('@round1 emt round trip', async () => {
+test('@emt emt round trip', async () => {
   await page.goto(process.env.URL);
   await page.locator(`[id="rtrip"]`).click();
   await page.locator(`[id="pff"]`).click();
