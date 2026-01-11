@@ -4,8 +4,8 @@ const { spawn } = require('child_process');
 const args = process.argv.slice(2);
 
 // Default grep tag if not passed
-const tag = args[0] || '@smoke';
-const env= args[1] || 'qa';
+const tag = args[0] || '@round1';
+const env= args[1] || 'aci';
 
 // Playwright command
 const testCmd = `cross-env ENV=${env} npx playwright test --grep ${tag}`;
