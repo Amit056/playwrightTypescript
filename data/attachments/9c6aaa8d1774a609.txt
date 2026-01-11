@@ -1,1 +1,0 @@
-[dotenv@17.2.3] injecting env (0) from src/helper/env/.env.qa -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
