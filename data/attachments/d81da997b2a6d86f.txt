@@ -1,7 +1,0 @@
-[dotenv@17.2.3] injecting env (5) from src/helper/env/.env.aci -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
-[2026-01-11T06:44:23.939Z] [INFO]: Worker Index: 0, Page Value: {"_type":"Page","_guid":"page@3013108ead3590a119a6bd44979918c0"}
-[2026-01-11T06:44:25.637Z] [INFO]: Filled input field: getByTestId('email-username') with text: adminuser0623113618
-[2026-01-11T06:44:25.726Z] [INFO]: Filled input field: getByTestId('password') with text: Admin@1234
-[2026-01-11T06:44:25.819Z] [INFO]: Clicked on element: getByTestId('submitlogin')
-[2026-01-11T06:44:25.820Z] [INFO]: Locating button element
-Browser closed

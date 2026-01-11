@@ -1,2 +1,0 @@
-[dotenv@17.2.3] injecting env (5) from src/helper/env/.env.aci -- tip: ⚙️  suppress all logs with { quiet: true }
-Browser closed

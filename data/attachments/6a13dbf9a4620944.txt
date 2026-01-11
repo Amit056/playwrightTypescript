@@ -1,0 +1,7 @@
+[dotenv@17.2.3] injecting env (5) from src/helper/env/.env.aci -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[2026-01-11T09:36:25.366Z] [INFO]: Worker Index: 0, Page Value: {"_type":"Page","_guid":"page@39be90a0b794f721328afb7ad98443b9"}
+[2026-01-11T09:36:26.908Z] [INFO]: Filled input field: getByTestId('email-username') with text: adminuser0623113618
+[2026-01-11T09:36:26.974Z] [INFO]: Filled input field: getByTestId('password') with text: Admin@1234
+[2026-01-11T09:36:27.040Z] [INFO]: Clicked on element: getByTestId('submitlogin')
+[2026-01-11T09:36:27.041Z] [INFO]: Locating button element
+Browser closed
