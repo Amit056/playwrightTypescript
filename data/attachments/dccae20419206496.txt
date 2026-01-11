@@ -1,0 +1,7 @@
+[dotenv@17.2.3] injecting env (5) from src/helper/env/.env.aci -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+[2026-01-11T10:44:16.238Z] [INFO]: Worker Index: 1, Page Value: {"_type":"Page","_guid":"page@517fc3c47c37f61c73234434ced1b88c"}
+[2026-01-11T10:44:17.400Z] [INFO]: Filled input field: getByTestId('email-username') with text: adminuser0623113618
+[2026-01-11T10:44:17.486Z] [INFO]: Filled input field: getByTestId('password') with text: Admin@1234
+[2026-01-11T10:44:17.553Z] [INFO]: Clicked on element: getByTestId('submitlogin')
+[2026-01-11T10:44:17.554Z] [INFO]: Locating button element
+Browser closed

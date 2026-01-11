@@ -1,7 +1,0 @@
-[dotenv@17.2.3] injecting env (5) from src/helper/env/.env.aci -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
-[2026-01-11T09:36:56.792Z] [INFO]: Worker Index: 1, Page Value: {"_type":"Page","_guid":"page@13809fabbb0a18ea79d8194ac39c7f35"}
-[2026-01-11T09:36:58.058Z] [INFO]: Filled input field: getByTestId('email-username') with text: adminuser0623113618
-[2026-01-11T09:36:58.161Z] [INFO]: Filled input field: getByTestId('password') with text: Admin@1234
-[2026-01-11T09:36:58.260Z] [INFO]: Clicked on element: getByTestId('submitlogin')
-[2026-01-11T09:36:58.261Z] [INFO]: Locating button element
-Browser closed
