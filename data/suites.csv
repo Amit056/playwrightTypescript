@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","79","@emt emt round trip","chromium","2026-01-11","failed","2026-01-11","","easeMyTrip.spec.ts","",""
+"","1","@mmt one way trip","chromium","2026-01-11","failed","2026-01-11","","makeMyTrip.spec.ts","",""
+"","70","two way trip","chromium","2026-01-11","failed","2026-01-11","","makeMyTrip.spec.ts","",""
+"","1","@sm login","chromium","2026-01-11","failed","2026-01-11","","sm.spec.ts","",""
+"","69","emt one way trip","chromium","2026-01-11","failed","2026-01-11","","easeMyTrip.spec.ts","",""
+"","1","@round1 aci login and ivite user","chromium","2026-01-11","failed","2026-01-11","","aci01Test.spec.ts","",""
+"","53","@sm login1","chromium","2026-01-11","failed","2026-01-11","","sm.spec.ts","",""
