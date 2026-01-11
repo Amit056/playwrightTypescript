@@ -181,11 +181,11 @@
     - generic:
       - generic [ref=e268]:
         - iframe [ref=e269]:
-          - button "Close message from company" [ref=f3e4] [cursor=pointer]:
-            - img [ref=f3e5]
+          - button "Close message from company" [ref=f4e4] [cursor=pointer]:
+            - img [ref=f4e5]
         - iframe [ref=e270]:
-          - button "Hi. Need any help?" [ref=f4e5] [cursor=pointer]
+          - button "Hi. Need any help?" [ref=f5e5] [cursor=pointer]
       - iframe [ref=e271]:
-        - button "Open messaging window" [ref=f5e5] [cursor=pointer]:
-          - img [ref=f5e7]
+        - button "Open messaging window" [ref=f6e5] [cursor=pointer]:
+          - img [ref=f6e7]
 ```
