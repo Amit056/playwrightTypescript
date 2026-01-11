@@ -1,16 +1,10 @@
 name: Playwright UI Automation
-
 on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main ]
   workflow_dispatch:
     inputs:
-      env:
-        description: "Environment"
+      environment:
+        description: "select the Environment to run the tests against"
         required: true
-        default: "qa"
         type: choice
         options:
           - dev
@@ -25,9 +19,6 @@ jobs:
   playwright-tests:
     runs-on: ubuntu-latest
 
-    env:
-      ENV: ${{ github.event.inputs.env || 'qa' }}
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -40,19 +31,20 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+      - name: Install npm & playwright dependencies
+        run: |
+          npm install 
+          npx playwright install-deps
+          npx playwright install
+          npx playwright install --force chrome
+      
 
       - name: Clean old Allure results
         run: rm -rf allure-results allure-report
 
       - name: Run Playwright Tests
         run: |
-          echo "Running in ENV=$ENV"
-          npx playwright test
+         ENV=${{ github.event.inputs.environment }} xvfb-run -a npm run test:tag
 
       - name: Generate Allure Report
         if: always()
