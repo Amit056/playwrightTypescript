@@ -1,0 +1,43 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e6]:
+  - generic [ref=e8]:
+    - img "myAci logo" [ref=e9]
+    - heading "Sign in" [level=3] [ref=e10]
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: Email / Username *
+        - textbox "Email / Username *" [ref=e15]:
+          - /placeholder: name@email.com
+      - generic [ref=e16]:
+        - generic [ref=e17]: Password *
+        - generic [ref=e18]:
+          - textbox "Password *" [ref=e19]:
+            - /placeholder: Enter your password
+          - button "display the password" [ref=e21] [cursor=pointer]:
+            - img [ref=e22]
+      - link "Forgot password?" [ref=e25] [cursor=pointer]:
+        - /url: /auth/forgot-password
+      - button "Sign in" [ref=e26] [cursor=pointer]:
+        - generic [ref=e28]: Sign in
+    - paragraph [ref=e29]:
+      - text: Don’t have an account?
+      - link "Sign up" [ref=e30] [cursor=pointer]:
+        - /url: /auth/signup
+    - separator [ref=e31]:
+      - generic [ref=e32]: OR
+    - link "Google Continue with Google" [ref=e33] [cursor=pointer]:
+      - /url: https://learn.myaci.acilearning.com/auth/login/google-oauth2/?auth_entry=login&next=https%3A%2F%2Fauth.myaci.acilearning.com%2Flogin%2Fcomplete
+      - img "Google" [ref=e35]
+      - text: Continue with Google
+    - link "Microsoft Continue with Microsoft" [ref=e36] [cursor=pointer]:
+      - /url: https://learn.myaci.acilearning.com/auth/login/azuread-oauth2/?auth_entry=login&next=https%3A%2F%2Fauth.myaci.acilearning.com%2Flogin%2Fcomplete
+      - img "Microsoft" [ref=e38]
+      - text: Continue with Microsoft
+  - generic [ref=e39]:
+    - link "Terms of Use" [ref=e40] [cursor=pointer]:
+      - /url: https://www.acilearning.com/terms-and-conditions/
+    - link "Privacy Policy" [ref=e41] [cursor=pointer]:
+      - /url: https://www.acilearning.com/privacy-policy/
+```
